@@ -14,7 +14,7 @@
 ## 鸣谢第三方
 ![luxun](./images/luxun.jpg)
 
-鲁迅博物馆资料查询在线检索系统使用
+鲁迅博物馆资料查询在线检索系统
 
 http://cx.luxunmuseum.com.cn/
 ## 禁止用于商业用途
