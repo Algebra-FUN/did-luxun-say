@@ -1,0 +1,47 @@
+{
+  "name": "鲁迅说过吗？",
+  "version": "1.0.0",
+  "description": "鲁迅说过吗？一搜便知",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "contextMenus",
+    "tabs"
+  ],
+  "omnibox": {
+    "keyword": "鲁迅"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://cx.luxunmuseum.com.cn/"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/lx-16.png",
+      "32": "images/lx-32.png",
+      "48": "images/lx-48.png",
+      "128": "images/lx-128.png"
+    }
+  },
+  "icons": {
+    "16": "images/lx-16.png",
+    "32": "images/lx-32.png",
+    "48": "images/lx-48.png",
+    "128": "images/lx-128.png"
+  },
+  "manifest_version": 2
+}
