@@ -9,9 +9,9 @@
 * 交流 Chrome Extension 开发技术
 * 致敬鲁迅先生
 ## 鸣谢第三方
-* ![luxun](./images/luxun.jpg)
-* 鲁迅博物馆资料查询在线检索系统使用说明
-* http://cx.luxunmuseum.com.cn/
+![luxun](./images/luxun.jpg)
+鲁迅博物馆资料查询在线检索系统使用
+http://cx.luxunmuseum.com.cn/
 ## 允许用于商业用途
-*只要你能那它赚钱，随意*
+*只要你能拿它赚钱，随意*
 ## 不接受捐助
