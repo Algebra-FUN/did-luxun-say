@@ -8,24 +8,24 @@ chrome.storage.sync.get('search', data => {
     }
     chrome.storage.sync.set({ search: { is: false } }, () => {
         console.log(`search = ${search.said}`)
-        let bm = document.getElementsByName('bottom')[0].contentWindow.document
-        let lm = bm.getElementsByName('left')[0].contentWindow.document
         let loop = num => {
-            if(num > 30) {
-                console.log('search failed：time out!')
+            if(num > 60){
+                console.log('search failed:wait time out!')
                 return
             }
-            if (!lm.getElementById('TextBox1')) {
-                console.log('try to search...')
-                setTimeout(() => {
-                    loop(++num)
-                }, 1000)
-            }else{
+            try{
+                let bm = document.getElementsByName('bottom')[0].contentWindow.document
+                let lm = bm.getElementsByName('left')[0].contentWindow.document
                 lm.getElementById('TextBox1').value = search.said
                 lm.getElementById('Button1').click()
                 console.log('search successed')
+            }catch(error){
+                setTimeout(() => {
+                    console.log(`wait for server...${num}`)
+                    loop(num)
+                },500)
             }
         }
-        loop(0)
+        loop(1)
     })
 })
