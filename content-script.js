@@ -22,7 +22,7 @@ chrome.storage.sync.get('search', data => {
             }catch(error){
                 setTimeout(() => {
                     console.log(`wait for server...${num}`)
-                    loop(num)
+                    loop(++num)
                 },500)
             }
         }
